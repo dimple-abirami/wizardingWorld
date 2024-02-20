@@ -1,0 +1,336 @@
+
+.home {
+    width: 102%;
+    margin-left: -20px;
+    margin-top: -20px;
+    position: absolute;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100px; 
+    z-index: 3; 
+}
+
+nav {
+    position: absolute;
+    top: 100px; 
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    z-index: 2;
+    color: white; 
+}
+nav:hover{
+    background-color: #10141b;
+}
+ 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul :hover{
+    text-decoration: underline;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.title-image {
+    margin-top: 150px; 
+    width: 35%;
+    z-index: 2;
+    margin-left: 550px;
+}
+
+.textcontent{
+    position: absolute; 
+    color: rgb(249, 244, 242);
+}
+
+.textcontent h1{
+    margin-top: 10px; 
+    margin-right: 350px;
+    margin-left: 450px;
+    font-family: 'Osaka Sans Serif';
+    font-size: 3.33333em;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    max-width: 760px;
+}
+
+.textcontent p{
+    margin-right: 600px;
+    margin-left: 600px;
+    font-size: 16px;
+    line-height: 1.38;
+    color: rgb(249, 244, 242);
+    text-align: center;
+    max-width: 520px;
+    padding: 0px 30px;
+}
+.textcontent button{
+    margin-right: 600px;
+    margin-top: 30px;
+    margin-left: 700px;
+    font-family: "Sofia Pro", Helvetica;
+    font-size: 12px;
+    height: 50px;
+    color: #fff;
+    background-color: #514a92;
+    text-align: center;
+    padding: 0px 30px;
+    width:280px;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.textcontent button:hover{
+    background-color: #38336a;
+}
+.diamond{
+    width: 3%;
+    margin-right: 600px;
+    margin-top: 80px;
+    margin-left: 820px;
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  padding-top: 850px;
+  padding-left: 300px;
+}
+.wrapper i {
+  top: 105%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #d2d2d2;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+  left: 400px;
+  display: inline;
+}
+.wrapper i:last-child{
+  left: 480px;
+}
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  display: flex;
+  height: 342px;
+  list-style: none;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.card img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  
+}
+.carousel .card h2 {
+  font-weight: 700;
+  padding-left: 20%;
+  padding-right: 20%;
+  color: white;
+  font-family: 'Bluu Next','Osaka Sans Serif',"Sofia Pro";
+  object-fit: contain;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+.img-right{
+  float: right;
+  width:80%;
+ 
+}
+.wizarding-potrait{
+  float:right;
+  margin-top: 70px;
+  width:70%;
+  height:60%;
+}
+.wizarding-text{
+  float: right;
+  position: absolute;
+  color: white;
+  font-size: 45px;
+  margin-left: 300px;
+  margin-top: 80px;
+  margin-right: 1000px;
+  text-align: right;
+}
+.buttons{
+  font-family: "Sofia Pro", Helvetica;
+    font-size: 12px;
+    height: 50px;
+    color: #fff;
+    background-color: #514a92;
+    text-align: center;
+    padding: 0px 30px;
+    width:180px;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    margin-top: 10px;
+}
+.potrait-image{
+  float:left;
+  margin-top: 150px;
+  width:70%;
+  height:60%;
+  margin-left: 150px;
+}
+.potrait-text{
+  float: left;
+  position: absolute;
+  color: white;
+  font-size: 35px;
+  margin-left: 1000px;
+  margin-top: 850px;
+  margin-right: 150px;
+  text-align: left;
+}
+.heading{
+  color: white;
+  margin-top: 95%;
+  margin-left: 15%;
+  font-size: 55px;
+}
+.display-images {
+  display: flex;
+  flex-direction: row;
+  margin-left: 200px;
+}
+
+.display-images img {
+  max-width: 30%;
+  height: 450px;
+  object-fit: cover;
+  
+}
+.heading1{
+  color: white;
+  margin-top: 5%;
+  margin-left: 15%;
+  font-size: 55px;
+}
+.content-left{
+  display: flex;
+  flex-direction: column;
+  float:left;
+  margin-left: 331px;
+}
+.content-right{
+  display: flex;
+  flex-direction: column;
+  float:right;
+  margin-right:331px;
+  margin-top: 150px;
+}
+#content-images{
+  width: 30%;
+}
+.footer-table {
+  position: absolute;
+  width: 50%;
+  margin-top: -400px;
+  margin-left: 250px;
+}
+
+.footer-table th {
+  width: 10%;
+  text-align: left;
+  padding: 5px;
+}
+.footer-content{
+  position: absolute;
+  width: 50%;
+  margin-top: -220px;
+  margin-left: 250px;
+  color: #696b78;;
+}
+
